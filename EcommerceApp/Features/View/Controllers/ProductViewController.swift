@@ -1,17 +1,15 @@
 import UIKit
 
 class ProductViewController: UIViewController {
-
-//MARK: Variables
-  
+    
+    //MARK: Variables
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let readData: ReadDataProtocol = ReadData()
-    
     private let productCollectionView: ProductCollectionView = ProductCollectionView()
-    
     private let readProductService: ProductViewModel = ProductViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.productNavigationTitle
@@ -19,7 +17,7 @@ class ProductViewController: UIViewController {
         getAllData()
     }
     
-//MARK: Functions
+    //MARK: Functions
     
     private func initDelegate() {
         collectionView.delegate = productCollectionView

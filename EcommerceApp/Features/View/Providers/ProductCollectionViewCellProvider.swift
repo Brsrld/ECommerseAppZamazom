@@ -21,12 +21,12 @@ final class ProductCollectionView: NSObject{
     //MARK: CollectionView Functions
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = UICollectionViewCell()
+        
         if let dataCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.productCollectionViewCellIdentifier, for: indexPath) as? ProductCollectionViewCell {
             dataCell.configure(with: items[indexPath.row].title ?? Constants.nilValue , with: items[indexPath.row].sortOverview ?? Constants.nilValue , with: items[indexPath.row].price ?? Constants.nilValue, with: items[indexPath.row].imageURL ?? Constants.nilValue)
             cell = dataCell
@@ -39,11 +39,11 @@ final class ProductCollectionView: NSObject{
         let vc = delegate?.getStoryBoard()?.instantiateViewController(identifier:Constants.productToDetailViewControllerIdentifier) as? ProductToDetailViewController
         vc?.products = items[indexPath.row]
         delegate?.getNavCont()?.pushViewController(vc! , animated: true)
-        
     }
 }
 
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    
     let columns: CGFloat = 1.25
     let collectionViewWidth = collectionView.bounds.width
     let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout

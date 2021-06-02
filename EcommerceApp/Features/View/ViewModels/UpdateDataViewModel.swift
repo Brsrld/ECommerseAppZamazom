@@ -9,7 +9,7 @@ protocol UpdateDataViewModelProtocol {
 //MARK: Model Logic
 
 final class UpdateDataViewModel:NSObject {
-        
+    
     let updateData: UpdateData = UpdateData()
     
     func UpdateDataFromModel (documentName:String ,title:String ,price:String ,overview:String ,category:String ,sortOverview:String) {

@@ -10,9 +10,7 @@ class AddProductViewController: UIViewController {
     @IBOutlet weak var overviewTextField: UITextField!
     @IBOutlet weak var sortOverviewTextField: UITextField!
     @IBOutlet weak var categoryTextField: UITextField!
-    @IBOutlet weak var uploadImage: UIImageView!
     
-    var imageURL:String?
     var image:Data?
     
     private let addProductService: AddProductViewModel = AddProductViewModel()

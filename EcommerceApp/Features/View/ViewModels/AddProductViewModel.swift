@@ -9,7 +9,7 @@ protocol ViewModelAddDataProtocol {
 //MARK: Model Logic
 
 final class AddProductViewModel:NSObject {
-        
+    
     let addDatas: AddData = AddData()
     let updateImage: UploadImage = UploadImage()
     
@@ -22,7 +22,7 @@ final class AddProductViewModel:NSObject {
     }
     
     func downloadURL(imagePath:String, completion: @escaping (URL?, Error?) -> Void) {
-      updateImage.downloadImage(imagePath: imagePath, completion: completion)
+        updateImage.downloadImage(imagePath: imagePath, completion: completion)
     }
 }
 

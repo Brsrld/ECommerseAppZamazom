@@ -9,7 +9,7 @@ protocol DetailViewModelProtocol {
 //MARK: Model Logic
 
 final class DetailViewModel:NSObject {
-        
+    
     let deleteData: DeleteData = DeleteData()
     
     func DeleteDataFromModel (documentName:String) {
