@@ -1,6 +1,6 @@
 # ECommerseAppZamazom
 
-I tried to use MVVM architecture design pattern in this app.Also I used cocuapods dependency manager.
+I tried to use MVVM architecture design pattern in this app.Also I used cocoapods dependency manager.
 I downloaded images with kingfisher framework and I stored products datas with firebase components.
 
 ######Scenes###### 
